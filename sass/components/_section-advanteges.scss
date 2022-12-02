@@ -1,0 +1,51 @@
+.company-advantages {
+    @extend %list;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    &__item {
+        text-align: left;
+
+        @media screen and (min-width: $tablet) {
+            flex-basis: calc((100% - 30px)/2);
+        }
+        
+        @media screen and (min-width: $desktop) {
+            flex-basis: calc((100% - 90px)/4);
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0;
+        margin-bottom: 30px;
+        
+        background-color: $teamBgColor;
+        border-radius: 4px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 10px;
+        
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        @media screen and (min-width: $tablet) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        color: $secondaryTextColor;
+        
+        line-height: 1.71;
+    }
+}

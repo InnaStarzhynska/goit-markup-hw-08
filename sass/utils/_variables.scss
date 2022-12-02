@@ -1,0 +1,27 @@
+// Colors
+$accentColor:  #2196F3;
+$primeryTextColor: #212121;
+$whiteColor:  #FFFFFF;
+$colorHeaderBorder: #ECECEC;
+$secondaryTextColor: #757575;
+$bgcButtonActive: #188CE8;
+$teamBgColor: #F5F4FA;
+$svgIconsColor: #AFB1B8;
+$footerBgColor:#2F303A;
+$whiteColorTranslucent: rgba(255, 255, 255, 0.6);
+$footerBgcIcons: rgba(255, 255, 255, 0.1);
+$overlayBgColor: rgba(33, 150, 243, 0.9);
+$backdropBgc: rgba(0, 0, 0, 0.2);
+$borderSocialsMenu: rgba(33, 33, 33, 0.2);
+
+// Fonts
+$mainFont: 'Roboto', sans-serif;
+$logoFont: 'Raleway', sans-serif;
+
+// Transition
+$transDuration: 250ms;
+$transTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;

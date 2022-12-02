@@ -1,0 +1,182 @@
+.page-header {
+    border-bottom: 1px solid;
+    border-color: $colorHeaderBorder;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header-nav {
+    
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__pages {
+        @extend %list;
+        display: none;
+
+        @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        }
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item + &__item {
+
+        @media screen and (min-width: $tablet) {
+            margin-left: 50px;
+        }
+    }
+}
+
+.header-nav__link {
+    @extend %link;
+    display: inline-block;
+    padding: 32px 2px;
+    color: $primeryTextColor;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color $transDuration $transTimingFunction;
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+
+.contacts {
+    @extend %list;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+        margin-top: 0;
+        margin-left: auto;
+        
+        &__item + &__item {
+                margin-top: 10px;
+            }
+    }
+    
+     @media screen and (min-width: $desktop) {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        margin-left: auto;
+    
+        &__item+&__item {
+            margin-top: 0;
+            }
+        }
+}
+
+.contacts__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    
+    color: $secondaryTextColor;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color $transDuration $transTimingFunction;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+
+.contacts__icon {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+            display: block;
+            margin-right: 10px;
+            fill: $secondaryTextColor;
+            
+            transition: fill $transDuration $transTimingFunction;
+            
+            .contacts__link:hover &,
+            .contacts__link:focus & {
+                fill: $accentColor;
+            }
+        }
+
+    
+}
+
+.contacts__icon--mail {
+ @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+     width: 14px;
+     height: 10px;
+ }
+}
+
+.contacts__icon--tel {
+    @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+        width: 10px;
+        height: 14px;
+    }
+}
+
+.menu-nav__link.current {
+    color: $accentColor;
+}
+
+.header-nav__link.current {
+    @media screen and (min-width: $tablet) {
+            color: $accentColor;
+    
+            &::after {
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+    
+                content: '';
+                background-color: $accentColor;
+                display: block;
+                width: 100%;
+                height: 4px;
+                border-radius: 2px;
+            }
+        }
+}
+
+.button-menu {
+    display: inline-block;
+    margin-left: auto;
+    background-color: transparent;
+    border-color: transparent;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-icon {
+    display: block;
+
+    &:hover, &:focus {
+        fill: $accentColor;
+    }
+}
+
+
+

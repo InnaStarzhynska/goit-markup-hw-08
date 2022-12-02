@@ -1,0 +1,28 @@
+.logo {
+    @extend %link;
+    display: inline-block;
+
+    font-family: $logoFont;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+
+    &__text {
+        color: $accentColor;
+    }
+}
+
+.header-nav__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    
+    color: $primeryTextColor;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+        }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
+}

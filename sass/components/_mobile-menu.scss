@@ -1,0 +1,144 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 48px 40px;
+
+    background-color: $whiteColor;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transDuration $transTimingFunction;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-nav {
+    margin-bottom: auto;
+}
+
+.menu-nav__pages {
+    @extend %list;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6.6vw;
+
+    @media screen and (min-width: 480px) {
+        gap: 32px;
+    }
+    
+}
+
+.menu-nav__link {
+    @extend %link;
+    color: $primeryTextColor;
+    
+    font-size: 8vw;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+
+    @media screen and (min-width: 480px) {
+            font-size: 40px;
+        }
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+
+.menu-contacts {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    gap: 6.6vw;
+
+    @media screen and (min-width: 480px) {
+            gap: 32px;
+        }
+}
+
+.menu-contacts__link {
+    @extend %link;
+    color: $secondaryTextColor;
+
+    font-weight: 500;
+    font-size: 5vw;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: 480px) {
+            font-size: 24px;
+        }
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+
+}
+.menu-contacts__link--accent {
+    font-weight: 500;
+    font-size: 7vw;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    color: $accentColor;
+
+    @media screen and (min-width: 480px) {
+        font-size: 34px;
+    }
+}
+
+.menu-socials {
+    @extend %list;
+    display: flex;
+    gap: 10px;
+    margin-top: 64px;
+}
+
+.menu-socials__item {
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid $borderSocialsMenu;
+    }
+}
+
+.menu-socials__link {
+    @extend %link;
+    color: $accentColor;
+
+    font-weight: 500;
+    font-size: 3.8vw;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+
+    @media screen and (min-width: 480px) {
+            font-size: 18px;
+        }
+}
+
+.menu-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: transparent;
+    border-color: transparent;
+}

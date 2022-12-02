@@ -1,0 +1,50 @@
+.clients {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        flex-basis: calc((100% - 30px)/2);
+
+        @media screen and (min-width: $tablet) {
+            flex-basis: calc((100% - 60px)/3);
+        }
+
+        @media screen and (min-width: $desktop) {
+            flex-basis: calc((100% - 150px)/6);
+        }
+    }
+}
+
+.clients__link {
+    display: inline-block;
+    padding: 16px 51px;
+    border: 1px solid $svgIconsColor;
+    border-radius: 4px;
+
+    transition: border-color $transDuration $transTimingFunction;
+
+    @media screen and (min-width: $tablet) {
+        padding: 16px 59px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        padding: 16px 31px;
+    }
+
+    &:hover, &:focus {
+        border-color: $accentColor;
+    }
+}
+
+.clients__logo {
+    fill: $svgIconsColor;
+
+    transition: fill $transDuration $transTimingFunction;
+
+    .clients__link:hover &, .clients__link:focus & {
+        fill: $accentColor;
+    }
+}

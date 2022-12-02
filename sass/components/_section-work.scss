@@ -1,0 +1,53 @@
+.section--desktop {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+}
+
+.section--top {
+    padding-top: 0;
+}
+
+.section__title {
+    margin-bottom: 50px;
+
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+    }
+}
+
+.work {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+
+    &__item {
+        position: relative;
+    }
+
+    &__text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        
+        width: 100%;
+        height: 70px;
+        background-color: rgba(47, 48, 58, 0.8);
+        padding: 27px 0;
+        
+        text-align: center;
+    }
+
+    &__title {
+        color: $whiteColor;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
