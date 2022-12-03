@@ -114,18 +114,22 @@ img {
 }
 
 .header-nav__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: #212121;
 }
 @media screen and (min-width: 768px) {
   .header-nav__logo {
     margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header-nav__logo {
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -314,15 +318,19 @@ img {
 }
 @media screen and (min-width: 769px) {
   .hero {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop.jpg);
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 .hero__title {
@@ -587,12 +595,10 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .company-advantages {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.company-advantages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .company-advantages__item {
   text-align: left;
@@ -647,7 +653,7 @@ img {
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
@@ -655,6 +661,7 @@ img {
 @media screen and (min-width: 1200px) {
   .section__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -819,9 +826,6 @@ img {
   text-transform: uppercase;
   line-height: 1.14;
 }
-.page-footer__links {
-  margin-bottom: 60px;
-}
 @media screen and (min-width: 768px) {
   .page-footer__links {
     margin-bottom: 0;
@@ -844,11 +848,14 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.container--tablet {
+  margin-bottom: 60px;
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .container--tablet {
     display: flex;
     align-items: baseline;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -863,11 +870,6 @@ img {
 @media screen and (min-width: 768px) {
   .page-footer__contacts {
     margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .page-footer__contacts {
-    margin-left: 61px;
   }
 }
 
@@ -940,6 +942,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer-form__field {
+    margin-bottom: 0;
     margin-right: 12px;
     width: 358px;
   }
@@ -1078,7 +1081,7 @@ img {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 48px 40px;
