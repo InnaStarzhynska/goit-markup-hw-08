@@ -54,6 +54,7 @@
         border-top-color: transparent;
         
         text-align: left;
+        flex-grow: 1;
     }
 
     &__title {
@@ -103,7 +104,9 @@
 
 .projects__link {
     @extend %link;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     transition: box-shadow $transDuration $transTimingFunction;
 
